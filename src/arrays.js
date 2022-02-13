@@ -184,7 +184,23 @@ function capitalizarNomeCompleto(nomeCompleto) {
 // Subtotal                                   R$  24,30 
 // Cupom de Desconto: NULABSSA                R$   3,00 
 // Total                                      R$  21,30
+
+function rightPad(texto, tamanho) {
+    while(texto.length < tamanho) {
+        texto += " ";
+    }
+}
+
 function gerarCupomFiscal(listaNomesProdutos, listaPrecosProdutos, listaCategoriasProdutos, cupom) {
+    
+    if (!listaValida(listaNomesProdutos)  || 
+    !listaValida(listaPrecosProdutos) || 
+    !listaValida(listaCategoriasProdutos)) {
+        return undefined;
+    }
+
+    const larguraColuna = [15, 10, 10, 8, 10];
+    const cabecalho = rightPad("nome", larguraColuna[0]) + rightPad("Valor", larguraColuna[1]) + rightPad("Desconto", larguraColuna(2)) + rightPad("Imposto", larguraColuna[3]) + rightPad("Total", larguraColuna(4));
 }
 
 module.exports = {
