@@ -48,13 +48,7 @@ module.exports = (app) => {
   app.get("/usuarios/:id/dados-pessoais", (req, res, next) => {
     const id = parseInt(req.params.id);
     Usuarios.listarDadosPessoais(id)
-      .then((resultado) => {
-        if (resultado) {
-          res.json(resultado[0]);
-        } else {
-          res.status(400).end();
-        }
-      })
+      .then((resultado) => res.json(resultado[0]))
       .catch((erros) => next(erros));
   });
 
@@ -69,7 +63,7 @@ module.exports = (app) => {
           res.status(405).send({ Erro: "Entrada Inválida" });
         }
       })
-      .catch((erros) => next(erros));
+      .catch((erros) => erros.codigo === 1 ? res.status(400).json({ CPF: "CPF Inválido" }) : next(erros));
   });
 
   //contatos

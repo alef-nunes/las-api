@@ -51,18 +51,18 @@ describe("API de Tipos de Vendas", () => {
     });
   });
 
-  // test("Alterar tipo de venda", async () => {
-  //   const resp = await request.put("/tipos-vendas/2").send({
-  //     "descricao": "Camarote"
-  //   });
-  //   expect(resp.statusCode).toBe(500);
-  //   expect(resp.body).toEqual(
-  //     {
-  //       "id": 2,
-  //       "descricao": "Camarote"
-  //     }
-  //   );
-  // });
+  test("Alterar tipo de venda", async () => {
+    const resp = await request.put("/tipos-vendas/2").send({
+      "descricao": "Camarote"
+    });
+    expect(resp.statusCode).toBe(200);
+    expect(resp.body).toEqual(
+      {
+        "id": 2,
+        "descricao": "Camarote"
+      }
+    );
+  });
 
   test("Excluir evento", async () => {
     const resp = await request.delete("/tipos-vendas/1");

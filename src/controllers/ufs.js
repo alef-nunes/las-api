@@ -1,4 +1,5 @@
 const UFs = require("../models/ufs");
+const municipios = require("../models/municipios");
 
 module.exports = (app) => {
     app.get("/ufs", (req, res, next) => {
@@ -7,10 +8,10 @@ module.exports = (app) => {
             .catch((erros) => next(erros));
     });
 
-    app.post("/ufs", (req, res, next) => {
-        const uf = req.body;
-        UFs.adicionar(uf)
-            .then((resultado) => res.json(resultado))
+    app.get("/ufs/:uf/municipios", (req, res, next) => {
+        const uf = req.params.uf;
+        municipios.listarMunicipiosPorEstado(uf)
+            .then((resultado) => resultado.length ? res.json(resultado) : res.status(404).end())
             .catch((erros) => next(erros));
     });
 };

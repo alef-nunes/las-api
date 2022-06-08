@@ -15,9 +15,9 @@ class TiposVendas {
         return Promise.resolve(tipoVenda);
     }
 
-    // alterar(valores, id) {
-    //     return Promise.resolve(tiposVendasMock.find((tipoVenda) => tipoVenda.id === id))
-    // }
+    alterar(valores, id) {
+        return Promise.resolve(tiposVendasMock.find((tipoVenda) => tipoVenda.id === id));
+    }
 
     excluir(id) {
         return Promise.resolve(tiposVendasMock.find((tipoVenda) => tipoVenda.id === id));

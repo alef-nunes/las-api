@@ -10,15 +10,15 @@ describe("API de Usuários", () => {
     const resp = await request.get("/usuarios");
     expect(resp.statusCode).toBe(200);
     expect(resp.body).toEqual([
-      { 
-          "id": 1,
-          "nome": "Adriana",
-          "urlFotoPerfil": "https://randomuser.me/api/portraits/women/13.jpg" 
+      {
+        "id": 1,
+        "nome": "Adriana",
+        "urlFotoPerfil": "https://randomuser.me/api/portraits/women/13.jpg"
       },
-      { 
-          "id": 2,
-          "nome": "Cristian",
-          "urlFotoPerfil": "https://randomuser.me/api/portraits/women/25.jpg" 
+      {
+        "id": 2,
+        "nome": "Cristian",
+        "urlFotoPerfil": "https://randomuser.me/api/portraits/women/25.jpg"
       }
     ]);
   });
@@ -27,10 +27,10 @@ describe("API de Usuários", () => {
     const resp = await request.get("/usuarios/2");
     expect(resp.statusCode).toBe(200);
     expect(resp.body).toEqual(
-      { 
+      {
         "id": 2,
         "nome": "Cristian",
-        "urlFotoPerfil": "https://randomuser.me/api/portraits/women/25.jpg" 
+        "urlFotoPerfil": "https://randomuser.me/api/portraits/women/25.jpg"
       }
     );
   });
@@ -121,9 +121,18 @@ describe("API de Usuários", () => {
   });
 
   test("Listar dados pessoais de um usuário", async () => {
-    const resp = await request.get("/usuarios/3/dados-pessoais");
+    const resp = await request.get("/usuarios/2/dados-pessoais");
     expect(resp.statusCode).toBe(200);
     expect(resp.body).toEqual("");
+  });
+
+  test("Alterar Dados Pessoais de um usuário", async () => {
+    const resp = await request.put("/usuarios/3/dados-pessoais").send(
+      {
+        "nomeCompleto": "Carlos Eduardo Souza"
+      }
+    );
+    expect(resp.statusCode).toBe(405);
   });
 
   test("Alterar senha de um usuario", async () => {
@@ -131,9 +140,35 @@ describe("API de Usuários", () => {
       senha: "@123#"
     });
     expect(resp.statusCode).toBe(204);
-    expect(resp.body).toEqual({
-      
-    });
   });
 
+  test("Listar contatos de um usuário", async () => {
+    const resp = await request.get("/usuarios/2/contatos");
+    expect(resp.statusCode).toBe(200);
+  });
+
+  test("Alterar contatos de um usuário", async () => {
+    const resp = await request.put("/usuarios/2/contatos").send([
+      {
+        "telefone": "71993364666"
+      }
+    ]);
+    expect(resp.statusCode).toBe(204);
+    expect(resp.body).toEqual({});
+  });
+
+  test("Listar endereço de usuário", async () => {
+    const resp = await request.get("/usuarios/2/endereco");
+    expect(resp.statusCode).toBe(200);
+    expect(resp.body).toEqual("");
+  });
+
+  test("Alterar endereço de um usuários", async () => {
+    const resp = await request.put("/usuarios/2/endereco").send([
+      {
+        "cep": "30040020"
+      }
+    ]);
+    expect(resp.statusCode).toBe(204);
+  });
 });
