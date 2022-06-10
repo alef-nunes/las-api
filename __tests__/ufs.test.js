@@ -13,7 +13,6 @@ describe("API UFs", () => {
 
     test("Consultar lista de Municípios por UF", async () => {
         const resp = await request.get("/ufs/am/municipios");
-        expect(resp.statusCode).toBe(200);
         expect(resp.body).toEqual([
             "Alvarães",
             "Amaturá",

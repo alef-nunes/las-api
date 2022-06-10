@@ -1,5 +1,5 @@
 {
-    "swagger": "2.0",
+    "swagger": 2.0,
     "info": {
       "description": "API do sistema de Licenciamento de Ambulantes de Salvador",
       "version": "1.1.0",
