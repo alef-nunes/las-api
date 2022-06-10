@@ -1,5 +1,5 @@
 {
-    "swagger": 2.0,
+    "swagger": "2.0",
     "info": {
       "description": "API do sistema de Licenciamento de Ambulantes de Salvador",
       "version": "1.1.0",
@@ -12,8 +12,8 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "host": "virtserver.swaggerhub.com",
-    "basePath": "/tiagolpadua/las-api/1.1.0",
+    "host": "localhost:3000",
+    "basePath": "/",
     "tags": [
       {
         "name": "usuario",
@@ -53,7 +53,7 @@
       }
     ],
     "schemes": [
-      "https"
+      "http"
     ],
     "paths": {
       "/usuarios": {
