@@ -72,7 +72,7 @@ class Usuarios {
       }
 
       const response = await fetch(url);
-      return !!response.status !== 200;
+      return !!response.status != 200;
 
     } catch {
       return false;

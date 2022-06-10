@@ -51,6 +51,11 @@ describe("API de Tipos de Vendas", () => {
     });
   });
 
+  test("Excluir tipo de venda", async () => {
+    const resp = await request.delete("/tipos-vendas/1");
+    expect(resp.statusCode).toBe(200);
+  });
+
   test("Alterar tipo de venda", async () => {
     const resp = await request.put("/tipos-vendas/2").send({
       "descricao": "Camarote"
@@ -64,8 +69,4 @@ describe("API de Tipos de Vendas", () => {
     );
   });
 
-  test("Excluir tipo de venda", async () => {
-    const resp = await request.delete("/tipos-vendas/1");
-    expect(resp.statusCode).toBe(200);
-  });
 });
