@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\example.test.js">
-    <testCase name="Home URL Base" duration="1101"/>
-  </file>
-  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\index.test.js">
-    <testCase name="Página Inicial URL Base" duration="55"/>
-  </file>
-  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\tiposVendas.test.js">
-    <testCase name="API de Tipos de Vendas Listar Tipos de Vendas" duration="49"/>
-    <testCase name="API de Tipos de Vendas Buscar tipo de venda existente" duration="9"/>
-    <testCase name="API de Tipos de Vendas Buscar tipo de venda inexistente" duration="14"/>
-    <testCase name="API de Tipos de Vendas Adicionar tipo de venda válido" duration="45"/>
-    <testCase name="API de Tipos de Vendas Alterar tipo de venda" duration="7"/>
-    <testCase name="API de Tipos de Vendas Excluir tipo de venda" duration="12"/>
-  </file>
-  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\ufs.test.js">
-    <testCase name="API UFs Consultar lista de UFS" duration="57"/>
-    <testCase name="API UFs Consultar lista de Municípios por UF" duration="80"/>
+    <testCase name="Home URL Base" duration="1056"/>
   </file>
   <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\eventos.test.js">
-    <testCase name="API de Eventos Listar eventos" duration="50"/>
-    <testCase name="API de Eventos Buscar evento por id existente" duration="9"/>
-    <testCase name="API de Eventos Buscar evento por id inexistente" duration="13"/>
-    <testCase name="API de Eventos Adicionar evento válido" duration="55"/>
-    <testCase name="API de Eventos Adicionar evento com data inválida" duration="15"/>
-    <testCase name="API de Eventos Alterar evento com dados válidos" duration="7"/>
-    <testCase name="API de Eventos Excluir evento" duration="7"/>
-    <testCase name="API de Eventos Buscar evento por status" duration="5"/>
+    <testCase name="API de Eventos Listar eventos" duration="160"/>
+    <testCase name="API de Eventos Buscar evento por id existente" duration="12"/>
+    <testCase name="API de Eventos Buscar evento por id inexistente" duration="17"/>
+    <testCase name="API de Eventos Adicionar evento válido" duration="63"/>
+    <testCase name="API de Eventos Adicionar evento com data inválida" duration="10"/>
+    <testCase name="API de Eventos Alterar evento com dados válidos" duration="31"/>
+    <testCase name="API de Eventos Excluir evento" duration="6"/>
+    <testCase name="API de Eventos Buscar evento por status" duration="8"/>
+  </file>
+  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\tiposVendas.test.js">
+    <testCase name="API de Tipos de Vendas Listar Tipos de Vendas" duration="82"/>
+    <testCase name="API de Tipos de Vendas Buscar tipo de venda existente" duration="9"/>
+    <testCase name="API de Tipos de Vendas Buscar tipo de venda inexistente" duration="9"/>
+    <testCase name="API de Tipos de Vendas Adicionar tipo de venda válido" duration="52"/>
+    <testCase name="API de Tipos de Vendas Alterar tipo de venda" duration="19"/>
+    <testCase name="API de Tipos de Vendas Excluir tipo de venda" duration="14"/>
+  </file>
+  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\index.test.js">
+    <testCase name="Página Inicial URL Base" duration="56"/>
+  </file>
+  <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\ufs.test.js">
+    <testCase name="API UFs Consultar lista de UFS" duration="66"/>
+    <testCase name="API UFs Consultar lista de Municípios por UF" duration="130"/>
   </file>
   <file path="C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\usuarios.test.js">
-    <testCase name="API de Usuários Listar usuários" duration="54"/>
-    <testCase name="API de Usuários Buscar usuário por id existente" duration="12"/>
-    <testCase name="API de Usuários Buscar usuário por id inexistente" duration="11"/>
-    <testCase name="API de Usuários Adicionar usuário com dados válidos" duration="43"/>
-    <testCase name="API de Usuários Adicionar usuário com nome inválido" duration="26"/>
-    <testCase name="API de Usuários Alterar dados de um usuário" duration="8"/>
-    <testCase name="API de Usuários Excluir dados de um usuário" duration="9"/>
-    <testCase name="API de Usuários Buscar usuário por nome válido" duration="8"/>
-    <testCase name="API de Usuários Listar dados pessoais de um usuário" duration="5"/>
-    <testCase name="API de Usuários Alterar Dados Pessoais de um usuário" duration="8"/>
+    <testCase name="API de Usuários Listar usuários" duration="46"/>
+    <testCase name="API de Usuários Buscar usuário por id existente" duration="16"/>
+    <testCase name="API de Usuários Buscar usuário por id inexistente" duration="6"/>
+    <testCase name="API de Usuários Adicionar usuário com dados válidos" duration="32"/>
+    <testCase name="API de Usuários Adicionar usuário com nome inválido" duration="8">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 400
+Received: 201
+    at Object.<anonymous> (C:\Users\alefn\OneDrive\Área de Trabalho\las-api\__tests__\usuarios.test.js:61:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testCase>
+    <testCase name="API de Usuários Alterar dados de um usuário" duration="7"/>
+    <testCase name="API de Usuários Excluir dados de um usuário" duration="5"/>
+    <testCase name="API de Usuários Buscar usuário por nome válido" duration="6"/>
+    <testCase name="API de Usuários Listar dados pessoais de um usuário" duration="8"/>
+    <testCase name="API de Usuários Alterar Dados Pessoais de um usuário" duration="11"/>
     <testCase name="API de Usuários Alterar senha de um usuario" duration="5"/>
     <testCase name="API de Usuários Listar contatos de um usuário" duration="4"/>
-    <testCase name="API de Usuários Alterar contatos de um usuário" duration="6"/>
-    <testCase name="API de Usuários Listar endereço de usuário" duration="5"/>
-    <testCase name="API de Usuários Alterar endereço de um usuários" duration="9"/>
+    <testCase name="API de Usuários Alterar contatos de um usuário" duration="7"/>
+    <testCase name="API de Usuários Listar endereço de usuário" duration="6"/>
+    <testCase name="API de Usuários Alterar endereço de um usuários" duration="7"/>
   </file>
 </testExecutions>
