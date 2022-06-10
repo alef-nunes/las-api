@@ -40,7 +40,7 @@ class Usuarios {
     ];
 
     const erros = validacoes.filter((campo) => !campo.valido);
-    const existemErros = erros.length > 0;
+    const existemErros = erros.length;
 
     if (existemErros) {
       throw { erroApp: erros };
