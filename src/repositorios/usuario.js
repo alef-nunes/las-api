@@ -38,7 +38,7 @@ class Usuario {
 
     alterarDadosPessoais(id, dadosPessoais) {
         const sql = "UPDATE Usuarios SET ? WHERE id = ?";
-        return query(sql, [dadosPessoais, id]);
+        return query(sql, [id, dadosPessoais]);
     }
 
     listarContatos(id) {
@@ -70,9 +70,9 @@ class Usuario {
         const sql = "SELECT * FROM Usuarios WHERE nome = ?";
         return query(sql, nome).then((data) => {
             if (data.length > 0) {
-                return true;
+                return !!true;
             } else {
-                return false;
+                return !!false;
             }
         });
     }

@@ -132,7 +132,7 @@ describe("API de Usuários", () => {
         "nomeCompleto": "Carlos Eduardo Souza"
       }
     );
-    expect(resp.statusCode).toBe(405);
+    expect(resp.statusCode).toBe(204);
   });
 
   test("Alterar senha de um usuario", async () => {

@@ -64,7 +64,7 @@ describe("API de Tipos de Vendas", () => {
     );
   });
 
-  test("Excluir evento", async () => {
+  test("Excluir tipo de venda", async () => {
     const resp = await request.delete("/tipos-vendas/1");
     expect(resp.statusCode).toBe(200);
   });

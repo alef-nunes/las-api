@@ -2,7 +2,7 @@ const UFs = require("../models/ufs");
 const municipios = require("../models/municipios");
 
 module.exports = (app) => {
-    app.get("/ufs", (req, res, next) => {
+    app.get("/ufs", (_req, res, next) => {
         UFs.listar()
             .then((resultados) => res.json(resultados.map((uf) => uf.sigla)))
             .catch((erros) => next(erros));

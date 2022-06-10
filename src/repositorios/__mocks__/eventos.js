@@ -1,5 +1,3 @@
-// const query = require("../infraestrutura/database/queries");
-
 const eventosMock = require("./eventoss.json");
 
 class Eventos {
@@ -15,7 +13,7 @@ class Eventos {
         return Promise.resolve(evento);
     }
 
-    alterar(valores, id) {
+    alterar(_valores, id) {
         return Promise.resolve(eventosMock.find((evento) => evento.id === id));
     }
 

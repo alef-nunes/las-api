@@ -27,14 +27,12 @@ class Eventos {
         return repositorio.excluir(id);
     }
 
-    isDatasValidas({dataInicio, dataFim}) {
+    isDatasValidas({ dataInicio, dataFim }) {
         const dataCriacao = moment().format("YYYY-MM-DD");
         const dataInicioFormatada = moment(dataInicio).format("YYYY-MM-DD");
         const dataFimFormatada = moment(dataFim).format("YYYY-MM-DD");
 
-        const dataValida = moment(dataInicioFormatada).isSameOrAfter(dataCriacao) && moment(dataFimFormatada).isSameOrAfter(dataInicioFormatada);
-
-        return dataValida;
+        return moment(dataInicioFormatada).isSameOrAfter(dataCriacao) && moment(dataFimFormatada).isSameOrAfter(dataInicioFormatada);
     }
 
     buscarPorStatus(status) {

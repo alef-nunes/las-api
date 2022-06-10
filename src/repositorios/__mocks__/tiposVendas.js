@@ -1,5 +1,3 @@
-// const query = require("../infraestrutura/database/queries");
-
 const tiposVendasMock = require("./tiposVendass.json");
 
 class TiposVendas {
@@ -15,7 +13,7 @@ class TiposVendas {
         return Promise.resolve(tipoVenda);
     }
 
-    alterar(valores, id) {
+    alterar(_valores, id) {
         return Promise.resolve(tiposVendasMock.find((tipoVenda) => tipoVenda.id === id));
     }
 

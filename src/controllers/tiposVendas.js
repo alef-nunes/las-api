@@ -1,7 +1,7 @@
 const TiposVendas = require("../models/tiposVendas");
 
 module.exports = (app) => {
-    app.get("/tipos-vendas", (req, res, next) => {
+    app.get("/tipos-vendas", (_req, res, next) => {
         TiposVendas.listar()
             .then((resultados) => res.json(resultados))
             .catch((erros) => next(erros));
@@ -32,7 +32,7 @@ module.exports = (app) => {
             })
             .catch((erros) => next(erros));
     });
-    
+
     app.put("/tipos-vendas/:id", (req, res, next) => {
         const id = parseInt(req.params.id);
         const valores = req.body;

@@ -1,8 +1,7 @@
-//const { json } = require("express/lib/response");
 const Usuarios = require("../models/usuarios");
 
 module.exports = (app) => {
-  app.get("/usuarios", (req, res, next) => {
+  app.get("/usuarios", (_req, res, next) => {
     Usuarios.listar()
       .then((resultados) => res.json(resultados))
       .catch((erros) => next(erros));

@@ -16,9 +16,9 @@ class Eventos {
         return query(sql, evento);
     }
 
-    alterar(valores, id) {
+    alterar(id, valores) {
         const sql = "UPDATE Eventos SET ? WHERE id = ?";
-        return query(sql, [valores, id]);
+        return query(sql, [id, valores]);
     }
 
     excluir(id) {
